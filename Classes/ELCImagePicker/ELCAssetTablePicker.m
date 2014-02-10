@@ -10,7 +10,7 @@
 #import "ELCAsset.h"
 #import "ELCAlbumPickerController.h"
 
-@interface ELCAssetTablePicker ()
+@interface ELCAssetTablePicker () <ELCAssetCellDelegate>
 {
     UIImageView *zoomImageView;
     CGRect zoomOrigFrame;
