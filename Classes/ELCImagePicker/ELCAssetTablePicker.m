@@ -240,7 +240,9 @@
     [self.view addSubview:zoomImageView];
     [UIView animateWithDuration:0.25 animations:^{
         CGFloat w = MIN( self.view.bounds.size.width, self.view.bounds.size.height) - 30;
-        CGRect f = CGRectMake( 15, 15, w, w );
+        CGFloat x = 15 + self.tableView.contentOffset.x + self.tableView.contentInset.left;
+        CGFloat y = (self.view.bounds.size.height/2-w/2) + self.tableView.contentOffset.y;// + self.tableView.contentInset.top;
+        CGRect f = CGRectMake( x, y, w, w );
         zoomImageView.frame = f;
     }];
 
