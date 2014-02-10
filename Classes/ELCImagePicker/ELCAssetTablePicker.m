@@ -189,11 +189,11 @@
     static NSString *CellIdentifier = @"Cell";
         
     ELCAssetCell *cell = (ELCAssetCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.delegate = self;
     
     if (cell == nil) {		        
         cell = [[ELCAssetCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    cell.delegate = self;
     
     [cell setAssets:[self assetsForIndexPath:indexPath]];
     
